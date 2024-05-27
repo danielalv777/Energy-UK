@@ -12,6 +12,15 @@
     display: flex;
     flex-direction: column;
 }
+.container-icon-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.title-name-faul {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 10px;
+}
 .label-date {
     margin-top: 30px;
     margin-left: 20px;

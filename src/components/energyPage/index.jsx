@@ -4,10 +4,28 @@ import React from 'react';
 import useEnergyPage from './useEnergyPage';
 
 // Components
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
+import { PieChart, Pie, Tooltip } from 'recharts';
+import NuclearIcon from './icons/nuclear';
+import GasIcon from './icons/gas';
+import HydroIcon from './icons/hydro';
+import SolarIcon from './icons/solar';
+import WindIcon from './icons/wind';
+import OtherIcon from './icons/other';
 
 // Styles
 import './styles.css'
+
+const icons = {
+  "nuclear": <NuclearIcon />,
+  "gas": <GasIcon />,
+  "hydro": <HydroIcon />,
+  "solar": <SolarIcon />,
+  "wind": <WindIcon />,
+  "biomass": <OtherIcon />,
+  "coal": <OtherIcon />,
+  "imports": <OtherIcon />,
+  "other": <OtherIcon />,
+};
 
 function EnergyPage({energyData}) {
 
@@ -35,8 +53,11 @@ function EnergyPage({energyData}) {
 
           {chartSelected && (
             <div className="container-details">
-              <h2>{chartSelected.nameFaul.toUpperCase()}</h2>
-              <span className="detail-faul">The percentage consumed of this kind of energy is: {(chartSelected.percentFaul * 100)} %</span>
+              <div className="container-icon-title">
+                {icons[chartSelected.nameFaul]}
+                <h2 className="title-name-faul">{chartSelected.nameFaul.toUpperCase()}</h2>
+              </div>
+              <span className="detail-faul">The percentage consumed of this kind of energy is: {(chartSelected.percentFaul * 100).toFixed(1)} %</span>
             </div>
           )}
         </div>
