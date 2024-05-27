@@ -1,7 +1,9 @@
 import React from 'react';
+import { createRoot } from 'react-dom/client';
 import ReactDOM from 'react-dom';
-import { App } from './app';
+import App from './app';
 
-document.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render((<App />), document.getElementById('reactMountPoint'));
-});
+const container = document.getElementById('reactMountPoint');
+const root = createRoot(container);
+
+root.render(<App />);

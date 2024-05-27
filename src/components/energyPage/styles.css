@@ -1,0 +1,32 @@
+.container-Charts {
+    width: 100%;
+    height: 100%;
+}
+.container-pieChart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+}
+.container-details {
+    display: flex;
+    flex-direction: column;
+}
+.label-date {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #4e5675;
+}
+.label-date-additional {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #4e5675;
+}
+.detail-faul {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
